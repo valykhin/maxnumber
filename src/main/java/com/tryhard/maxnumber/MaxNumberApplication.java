@@ -4,10 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MaxnumberApplication {
+public class MaxNumberApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MaxnumberApplication.class, args);
+		SpringApplication.run(MaxNumberApplication.class, args);
 	}
-
 }

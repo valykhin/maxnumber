@@ -1,5 +1,6 @@
 package com.tryhard.maxnumber.controllers;
 
+import com.tryhard.maxnumber.model.MaxNumberResponse;
 import com.tryhard.maxnumber.services.MaxNumberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,8 +15,8 @@ public class NumberRestController {
     @Autowired
     private MaxNumberService maxNumberService;
 
-    @GetMapping(value = "/{order}")
-    public String getMaxNumber(@PathVariable int order, @RequestParam String filepath) throws IOException {
-        return maxNumberService.getMaxNumber(order, filepath);
+    @GetMapping(value = "/{index}")
+    public MaxNumberResponse getMaxNumber(@PathVariable int index, @RequestParam String filepath) throws IOException {
+        return maxNumberService.getMaxNumber(index, filepath);
     }
 }
